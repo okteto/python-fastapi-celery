@@ -1,5 +1,4 @@
 deploy:
-  - helm upgrade --install okteto/rabbitmq
   - kubectl apply -f k8s.yml
 devs:
   - okteto.yml
