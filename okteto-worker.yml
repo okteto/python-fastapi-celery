@@ -1,6 +1,6 @@
-name: python-celery
+name: python-worker
 labels:
-  app.kubernetes.io/component: queue
+  app.kubernetes.io/component: worker
 image: okteto/python-fastapi
 command:
 - bash

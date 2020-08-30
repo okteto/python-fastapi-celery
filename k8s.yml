@@ -22,22 +22,25 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: celery
+  name: worker
   labels:
-    app.kubernetes.io/component: queue
+    app.kubernetes.io/component: worker
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: celery
+      app: worker
   template:
     metadata:
       labels:
-        app: celery
+        app: worker
     spec:
       containers:
       - image: okteto/python-fastapi
-        name: celery
+        name: worker
+        command:
+        - python
+        - code/worker.py
 ---
 
 apiVersion: v1
