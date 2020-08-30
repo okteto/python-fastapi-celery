@@ -2,8 +2,7 @@ name: python-worker
 labels:
   app.kubernetes.io/component: worker
 image: okteto/python-fastapi
-command:
-- bash
+command: bash
 workdir: /okteto
 volumes:
 - /root/.cache/pip

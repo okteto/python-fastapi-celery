@@ -4,4 +4,4 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 COPY code code
 ENV PORT=8080
-CMD ["python", "code/main.py"]
+CMD ["python", "-m", "code.api"]

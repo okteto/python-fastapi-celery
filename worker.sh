@@ -1,0 +1,1 @@
+watchmedo auto-restart --directory=./ --pattern=*.py --recursive -- celery worker --app=code.worker.app --concurrency=1 --loglevel=INFO

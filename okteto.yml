@@ -2,8 +2,7 @@ name: python-fastapi
 labels:
   app.kubernetes.io/component: api
 image: okteto/python-fastapi
-command:
-- bash
+command: bash
 environment:
   - ENV=dev
 workdir: /okteto
