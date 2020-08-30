@@ -1,0 +1,14 @@
+name: python-celery
+labels:
+  app.kubernetes.io/component: queue
+image: okteto/python-fastapi
+command:
+- bash
+workdir: /okteto
+volumes:
+- /root/.cache/pip
+sync:
+- .:/okteto
+remote: 2223
+reverse:
+- 9000:9000
