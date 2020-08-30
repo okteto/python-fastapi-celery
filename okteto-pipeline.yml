@@ -1,0 +1,6 @@
+deploy:
+  - helm upgrade --install rabbitmq okteto/rabbitmq
+  - kubectl apply -f k8s.yml
+devs:
+  - okteto.yml
+  - okteto-worker.yml
