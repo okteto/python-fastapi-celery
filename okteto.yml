@@ -4,6 +4,8 @@ labels:
 image: okteto/python-fastapi
 command:
 - bash
+environment:
+  - ENV=dev
 workdir: /okteto
 volumes:
 - /root/.cache/pip
