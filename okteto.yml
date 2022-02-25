@@ -1,5 +1,5 @@
 name: python-fastapi
-labels:
+selector:
   app.kubernetes.io/component: api
 image: okteto/python-fastapi
 command: bash
