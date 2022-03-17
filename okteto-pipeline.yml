@@ -1,5 +1,7 @@
 deploy:
-  - helm upgrade --install rabbitmq okteto/rabbitmq
+  - helm repo add okteto https://apps.okteto.com
+  - helm repo update
+  - helm upgrade --install rabbitmq okteto/rabbitmq -f rabbitmq-values.yml
   - kubectl apply -f k8s.yml
 devs:
   - okteto.yml

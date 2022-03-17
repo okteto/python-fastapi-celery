@@ -1,5 +1,5 @@
 name: python-worker
-labels:
+selector:
   app.kubernetes.io/component: worker
 image: okteto/python-fastapi
 command: bash
